@@ -3,3 +3,4 @@ Ejercicios y Actividades del curso de Python
 Jóse Gregory
 Cenidier
 David
+Juan Diaz
