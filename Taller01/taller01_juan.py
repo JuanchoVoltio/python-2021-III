@@ -1,39 +1,42 @@
 import random
 
-print("========================")
+crew_member_template_massage = "pareja {0} cambia llanta {0}"
+
+print("="*24)
 print("taller01, parada de pits")
 print("========================\n")
 
 vehiculoInactivo = "llega el vehículo a pits, sincrónicamente dos mecánicos por rueda cambian: \n"
 
-mecanicos_1_2 = "cambian llanta 1, 'Si', duración cambio de llanta en segundos: \n"
+pareja_1 = crew_member_template_massage.format(1)
+tiempo_pareja_mecanicos_1 = random.randint(1,3)
 
-random_variable_1_2 = random.randint(1,3)
-mecanicos_3_4 = "cambian llanta 2, 'Si', duración cambio de llanta en segundos: \n"
+pareja_2 = crew_member_template_massage.format(2)
+tiempo_pareja_mecanicos_2 = random.randint(1,3)
 
-random_variable_3_4 = random.randint(1,3)
-mecanicos_5_6 = "cambian llanta 3, 'Si', duración cambio de llanta en segundos: \n"
+pareja_3 = crew_member_template_massage.format(3)
+tiempo_pareja_mecanicos_3 = random.randint(1,3)
 
-random_variable_5_6 = random.randint(1,3)
-mecanicos_7_8 = "cambian llanta 4, 'Si', duración cambio de llanta en segundos: \n"
+pareja_4 = crew_member_template_massage.format(4)
+tiempo_pareja_mecanicos_4 =  random.randint(1,3)
 
-random_variable_7_8 = random.randint(1,3)
-tanquear = "repostaje de combustible,'Sin Tanqueo' \n"
+
+tanquear = "\nrepostaje de combustible,'Sin Tanqueo' \n"
 vehiculoActivo = "Sincronización completa, estado OK, salida según tiempo promedio gastado por cambio de llanta en segundos \n"
 
-promedio_en_segundos = (random_variable_1_2 + random_variable_3_4 + random_variable_5_6 + random_variable_7_8 ) / 4
+promedio_en_segundos = (tiempo_pareja_mecanicos_1 + tiempo_pareja_mecanicos_2 + tiempo_pareja_mecanicos_3 + tiempo_pareja_mecanicos_4 ) / 4
 
 print(vehiculoInactivo)
-print(mecanicos_1_2)
-print(random_variable_1_2)
-print(mecanicos_3_4)
-print(random_variable_3_4)
-print(mecanicos_5_6)
-print(random_variable_5_6)
-print(mecanicos_7_8)
-print(random_variable_7_8)
-print(tanquear)
-print(vehiculoActivo)
-print("El intervalo de tiempo que gastó en cambio de llantas fue de: " ,promedio_en_segundos,'Sg')
+print(pareja_1)
+print("Tiempo de demora en el cambio " ,tiempo_pareja_mecanicos_1,"sg \n")
+print(pareja_2 )
+print("Tiempo de demora en el cambio " ,tiempo_pareja_mecanicos_2,"sg \n")
+print(pareja_3)
+print("Tiempo de demora en el cambio " ,tiempo_pareja_mecanicos_3,"sg \n")
+print(pareja_4)
+print("Tiempo de demora en el cambio " ,tiempo_pareja_mecanicos_4,"sg \n" )
+print(tanquear,"\n")
+print(vehiculoActivo,"\n")
+print("El intervalo de tiempo total que gastó en cambio de las '4' llantas fue de: " ,promedio_en_segundos, "Sg \n")
 print("Fin.")
 
